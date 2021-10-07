@@ -3278,8 +3278,8 @@ var RequestHandler = /*#__PURE__*/function () {
       var verb = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'GET';
       var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       var headers = {
-        'Content-type': 'application/json' // 'X-WP-Nonce': this.nonce,
-
+        'Content-type': 'application/json',
+        'X-WP-Nonce': this.nonce,
       };
       return this.makeRequest(this.root, verb, data, headers);
     }
