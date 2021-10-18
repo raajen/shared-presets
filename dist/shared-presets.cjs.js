@@ -2845,7 +2845,10 @@ var PresetsAccordionItem = /*#__PURE__*/function (_Component) {
         fill: "#286EFA",
         fillRule: "nonzero"
       }));
-      var name = this.props.default ? /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, this.props.name, icon) : this.props.name;
+      var name = this.props.default ? /*#__PURE__*/React__default['default'].createElement(React__default['default'].Fragment, null, this.props.name, /*#__PURE__*/React__default['default'].createElement("span", {
+        className: "sui-tooltip",
+        "data-tooltip": "Recommended Config"
+      }, icon)) : this.props.name;
       var descstyles = {
         overflow: 'hidden',
         display: 'block',
@@ -3288,8 +3291,8 @@ var RequestHandler = /*#__PURE__*/function () {
       var verb = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 'GET';
       var data = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : null;
       var headers = {
-        'Content-type': 'application/json' // 'X-WP-Nonce': this.nonce,
-
+        'Content-type': 'application/json',
+        'X-WP-Nonce': this.nonce
       };
       return this.makeRequest(this.root, verb, data, headers);
     }
