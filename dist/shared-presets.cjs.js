@@ -290,6 +290,25 @@ function _createForOfIteratorHelper(o, allowArrayLike) {
   };
 }
 
+var screen$1 = {
+  mobile: 480,
+  tablet: 783,
+  laptop: 1200,
+  desktop: 1500
+};
+var device$1 = {
+  mobile: "(min-width: ".concat(screen$1.mobile, "px)"),
+  tablet: "(min-width: ".concat(screen$1.tablet, "px)"),
+  laptop: "(min-width: ".concat(screen$1.laptop, "px)"),
+  desktop: "(min-width: ".concat(screen$1.desktop, "px)")
+};
+var deviceMax = {
+  mobile: "(max-width: ".concat(screen$1.mobile, "px)"),
+  tablet: "(max-width: ".concat(screen$1.tablet, "px)"),
+  laptop: "(max-width: ".concat(screen$1.laptop, "px)"),
+  desktop: "(max-width: ".concat(screen$1.desktop, "px)")
+};
+
 function _extends$4() {
   _extends$4 = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -390,17 +409,17 @@ var utils = {
   gutter: 30,
   gutter_md: 20
 };
-var screen$1 = {
+var screen = {
   mobile: 480,
   tablet: 783,
   laptop: 1200,
   desktop: 1500
 };
-var device$1 = {
-  mobile: "(min-width: ".concat(screen$1.mobile, "px)"),
-  tablet: "(min-width: ".concat(screen$1.tablet, "px)"),
-  laptop: "(min-width: ".concat(screen$1.laptop, "px)"),
-  desktop: "(min-width: ".concat(screen$1.desktop, "px)")
+var device = {
+  mobile: "(min-width: ".concat(screen.mobile, "px)"),
+  tablet: "(min-width: ".concat(screen.tablet, "px)"),
+  laptop: "(min-width: ".concat(screen.laptop, "px)"),
+  desktop: "(min-width: ".concat(screen.desktop, "px)")
 };
 
 var Box = function Box(_ref) {
@@ -487,7 +506,7 @@ var Header$1 = styled__default["default"].div.attrs(function (props) {
   return 'block' !== props.display && '> * { max-width: 100%; flex: 0 0 auto; }';
 }, function (props) {
   return 'block' !== props.display && '> * + * { margin-left: 10px; }';
-}, device$1.tablet, function (props) {
+}, device.tablet, function (props) {
   return props.paddingTop || 0 === props.paddingTop ? props.paddingTop : utils.gutter / 2;
 }, function (props) {
   return props.paddingRight || 0 === props.paddingRight ? props.paddingRight : utils.gutter;
@@ -535,7 +554,7 @@ var Body = styled__default["default"].div.attrs(function (props) {
   return props.borderBottom || 0 === props.borderBottom ? props.borderBottom : 0;
 }, function (props) {
   return props.alignment || 'left';
-}, device$1.tablet, function (props) {
+}, device.tablet, function (props) {
   return props.paddingTop || 0 === props.paddingTop ? props.paddingTop : utils.gutter;
 }, function (props) {
   return props.paddingRight || 0 === props.paddingRight ? props.paddingRight : utils.gutter;
@@ -581,7 +600,7 @@ var Footer = styled__default["default"].div.attrs(function (props) {
   return 'block' !== props.display && '> * { max-width: 100%; flex: 0 0 auto; }';
 }, function (props) {
   return 'block' !== props.display && '> * + * { margin-left: 10px; }';
-}, device$1.tablet, function (props) {
+}, device.tablet, function (props) {
   return props.paddingTop || 0 === props.paddingTop ? props.paddingTop : utils.gutter;
 }, function (props) {
   return props.paddingRight || 0 === props.paddingRight ? props.paddingRight : utils.gutter;
@@ -1933,19 +1952,6 @@ var EditModal = function EditModal(_ref) {
   });
 };
 
-var screen = {
-  mobile: 480,
-  tablet: 783,
-  laptop: 1200,
-  desktop: 1500
-};
-var device = {
-  mobile: "(min-width: ".concat(screen.mobile, "px)"),
-  tablet: "(min-width: ".concat(screen.tablet, "px)"),
-  laptop: "(min-width: ".concat(screen.laptop, "px)"),
-  desktop: "(min-width: ".concat(screen.desktop, "px)")
-};
-
 function _extends$1() {
   _extends$1 = Object.assign || function (target) {
     for (var i = 1; i < arguments.length; i++) {
@@ -2840,7 +2846,7 @@ function escapeHTML(value) {
 }
 
 var _templateObject$1, _templateObject2$1, _templateObject3$1, _templateObject4$1, _templateObject5$1;
-var Header = styled__default["default"].div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral$3(["\n\tmargin: 0 0 20px;\n\n\t> div:not(.sui-tooltip) {\n\n\t\t@media ", " {\n\t\t\tmin-width: 1px;\n\t\t\tflex: 1;\n\t\t}\n\t}\n\n\t> div.sui-tooltip {\n\t\tmargin: 10px 0 0 !important;\n\n\t\t@media ", " {\n\t\t\tflex: 0 0 auto;\n\t\t\tmargin-top: 0 !important;\n\t\t\tmargin-left: 10px !important;\n\t\t}\n\t}\n\n\t@media ", " {\n\t\tdisplay: flex;\n\t\talign-items: center;\n\t}\n"])), device.tablet, device.tablet, device.tablet);
+var Header = styled__default["default"].div(_templateObject$1 || (_templateObject$1 = _taggedTemplateLiteral$3(["\n\tmargin: 0 0 20px;\n\n\t> div:not(.sui-tooltip) {\n\n\t\t@media ", " {\n\t\t\tmin-width: 1px;\n\t\t\tflex: 1;\n\t\t}\n\t}\n\n\t> div.sui-tooltip {\n\t\tmargin: 10px 0 0 !important;\n\n\t\t@media ", " {\n\t\t\tflex: 0 0 auto;\n\t\t\tmargin-top: 0 !important;\n\t\t\tmargin-left: 10px !important;\n\t\t}\n\t}\n\n\t@media ", " {\n\t\tdisplay: flex;\n\t\talign-items: center;\n\t}\n"])), device$1.tablet, device$1.tablet, device$1.tablet);
 var Label = styled__default["default"].p(_templateObject2$1 || (_templateObject2$1 = _taggedTemplateLiteral$3(["\n\tmargin: 0 !important;\n\tcolor: #333 !important;\n"])));
 var Description = styled__default["default"].p(_templateObject3$1 || (_templateObject3$1 = _taggedTemplateLiteral$3(["\n\tmargin: 3px 0 0 !important;\n"])));
 var Authentic = styled__default["default"].svg(_templateObject4$1 || (_templateObject4$1 = _taggedTemplateLiteral$3(["\n    margin-left: 10px;\n"])));
