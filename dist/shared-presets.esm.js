@@ -2904,7 +2904,7 @@ var PresetsAccordionItem = /*#__PURE__*/function (_Component) {
       }, /*#__PURE__*/React.createElement(AccordionItemHeaderAlt, {
         className: "sui-accordion-item-header",
         state: open ? 'true' : 'false',
-        title: name,
+        title: escapeHTML(name),
         image: this.props.image,
         onClick: function onClick(e) {
           return _this2.toggle(e);
@@ -2913,7 +2913,7 @@ var PresetsAccordionItem = /*#__PURE__*/function (_Component) {
         size: "5"
       }, /*#__PURE__*/React.createElement("div", {
         style: descstyles
-      }, this.props.description)), /*#__PURE__*/React.createElement("div", null, this.props.showApplyButton && /*#__PURE__*/React.createElement(Button$1, {
+      }, escapeHTML(this.props.description))), /*#__PURE__*/React.createElement("div", null, this.props.showApplyButton && /*#__PURE__*/React.createElement(Button$1, {
         label: this.props.applyLabel || 'Apply',
         design: "ghost",
         onClick: this.accordionHeadApplyClicked
@@ -2942,7 +2942,7 @@ var PresetsAccordionItem = /*#__PURE__*/function (_Component) {
         className: "sui-label"
       }, escapeHTML(this.props.name)), /*#__PURE__*/React.createElement(Description, {
         className: "sui-description"
-      }, this.props.description)), /*#__PURE__*/React.createElement("div", {
+      }, escapeHTML(this.props.description))), /*#__PURE__*/React.createElement("div", {
         className: "sui-tooltip",
         "data-tooltip": this.props.editLabel || 'Edit Name and Description'
       }, /*#__PURE__*/React.createElement(ButtonIcon$2, {
