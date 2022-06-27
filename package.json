@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/wpmudev/shared-modules#readme",
   "devDependencies": {
-    "@wpmudev/shared-compiler": "^1.0.0",
+   // "@wpmudev/shared-compiler": "^1.0.0",
     "react": "^17.0.2"
   },
   "dependencies": {
